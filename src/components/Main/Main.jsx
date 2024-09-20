@@ -2,19 +2,25 @@ import React, { useContext } from 'react'
 import './Main.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../context/Context'
+import { logout } from '../../firebase'
 const Main = () => {
     const {onSent, recentPrompt, showResult, loading, resultData, setInput, input} = useContext(Context)
   return (
     <div className='main'>
         <div className="nav">
-            <p>Hanzal Chat GPT</p>
-            <img src={assets.user_icon} alt="" />
+            <p>Gemini</p>
+            <div className="profile-signout">
+             <img src={assets.user_icon} alt="" />
+             <p onClick={()=>{logout()}}>Sign Out</p>
+            </div>
+            
+
         </div>
         <div className="main-container">
             {!showResult?
             <>
                 <div className="greet">
-                <p><span>Hello, Hanzala.</span></p>
+                <p><span>Hello User!</span></p>
                 <p>How can i help you today?</p>
             </div>
             <div className="cards">

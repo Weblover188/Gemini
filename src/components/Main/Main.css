@@ -19,6 +19,12 @@
     border-radius: 50%;
 }
 
+.profile-signout p{
+    cursor: pointer;
+    text-decoration: underline;
+    color: red;
+    font-size: 12px;
+}
 .main-container{
     max-width: 900px;
     margin: auto;
