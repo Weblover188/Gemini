@@ -15,7 +15,7 @@ const App = () => {
     onAuthStateChanged(auth, async(user)=>{
       if(user){
         console.log("Logged In");
-        navigate ('/');
+        navigate ('/gemini');
       }
       else{
         console.log("Logged Out");
@@ -28,7 +28,7 @@ const App = () => {
     <>
       <ToastContainer theme='dark'/>
       <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/gemini' element={<Home />} />
       <Route path='/login' element={<Login/>} />
 
       </Routes>
